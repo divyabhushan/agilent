@@ -1,0 +1,182 @@
+---
+id: user-group
+title: Agilent Users and Groups
+sidebar_label: Agilent Users and Groups
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+Agilent features are only available to a set of users configured in WindowsAD platform and added to agilent specific group.
+An Admin creates *Groups* with specific permissions and then assigns users to these groups.
+
+Agilent user types based on their roles:
+
+| User            | Description                                                                                                                                                  |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Super Admin** | User ( most privileged) configured while installing BI Hub. Super Admin is added to the "Admin" group and is the default user.                               |
+| **Admin**       | User added to the "Admin" group by the Super Admin. Admins cannot modify "admin" group permissions, nor can add other Admins. Have both admin and user mode. |
+| **Power Users** | User added to a custom group by an Admin. Have both admin and user mode. Power users cannot modify group permissions.                                        |
+| **User**        | This is a regular user with just user-mode.                                                                                                                  |
+## Before you begin
+
+Log-in to BI Hub as a Super Admin with username as `bihubadmin`, and password as `password`.
+
+Go to **Authentication > Add Authentication**. Add "Windows AD" authentication, and assign Groups.
+ <div class="center">
+    <Zoom>
+        <img alt="Sync Windows AD users" src={useBaseUrl('admin/winad-auth.png')}
+        />
+    </Zoom>
+    <p>WindowsAD Authentication</p>
+ </div>
+
+## Add Agilent Users
+
+To add multiple agilent users from a group:
+1. In **My Organization > Users** section, click **Assign AD Groups** and enter a single Windows AD Group or a list of Groups to pick the agilent users from, and click **Add**.
+ <div class="center">
+    <Zoom>
+        <img alt="Assign WindowsAd Group" src={useBaseUrl('admin/ad-group.png')}
+        />
+    </Zoom>
+    <p>Assign WindowsAD Group</p>
+ </div>
+
+ :::important
+  The Group(s) added here must already be added in the Authentication settings for Windows AD (as added in the previous section).
+ :::
+1. Select **Authentication > Windows AD** and click **Sync Users**.
+
+All the users from an assigned Group are added as Agilent users and listed in the **My Organization > Users** section.
+
+<div class="center">
+    <Zoom>
+        <img alt="Agilent Users" src={useBaseUrl('admin/agilent-users.png')}
+        />
+    </Zoom>
+    <p>Agile Users</p>
+</div>
+
+## Create Admins
+
+Only a `bihubadmin` user can create other admins by adding Agilent users to the **Admin** group. 
+
+:::note
+No other admin except `bihubadmin` is granted access to the **Admin** group and cannot create more super admins.
+:::
+
+* Go to **User Manager > Manage User Groups**
+* Select the **Admin** group, and click **ADD**.
+
+screenshot - pop-up
+
+* In the **Add user to group(s)** pop-up, select a user(s) from the list and click **ADD**.
+
+:::note
+`bihubadmin` is not allowed to edit the permissions of the **Admin** group. Only a System Administrator must edit the Admin group permissions from the backend.
+:::
+
+> To remove a user from a group, select a group and click **Remove** next to a user.
+
+## Create Power Users
+
+Admins must also create one or more Power users.
+Admins must grant power users just a minimum set of permissions to administer the users/groups and ABRT reports.
+
+A better approach is to create a custom group with a limited subset of the admin privileges and then add the power users to this custom group.
+
+### 1. Create Agilent Custom Groups
+
+Log-in as an Admin and click **Admin Mode** at the top right corner.
+
+* Go to **User Manager > Manage User Groups**
+* Click **Add User Group**.
+* Enter a Group's name and click **Create**.
+* Click **Manage Permissions** next to your custom group. 
+* Enable the desired permissions for a group.
+
+screenshot
+* Following are the available permissions:
+
+<table>
+        <tr>
+            <th colspan="2">Agilent Features</th>
+            <th>Permissions</th>
+        </tr>
+        <tr>
+            <td rowspan="4">Report Management</td>
+        </tr>
+        <tr>
+            <td>Upload Report Instance</td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Delete Report Instance</td>
+            <td> </td>
+        </tr>
+        <tr><td>Create Category</td><td> </td></tr>
+        <tr>
+            <td rowspan="4">Segment Management</td>
+            <td>Add Segment</td>
+            <td> </td>
+        </tr>
+        <tr><td>Edit Segment</td><td> </td></tr>
+        <tr><td>Delete Segment</td><td> </td></tr>
+        <tr><td>Edit Segment Report Permission</td><td> </td></tr>
+        <tr>
+            <td rowspan="3">Support Management</td>
+            
+            <td>Edit Support Management</td><td> </td>
+        </tr>
+        <tr>
+            <td></td><td> </td>
+        </tr>
+        <tr>
+            <td></td><td> </td>
+        </tr>
+        <tr>
+            <td>User Management</td>
+            <td></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>User Group</td>
+            <td></td>
+            <td> </td>
+        </tr>
+</table>
+
+### 2. Add users to the Custom group
+
+* Select the custom group, and click **ADD**.
+* Search the username(s) and click **ADD**.
+
+screenshot
+
+:::important
+All the users(Power users) added to this custom group will have both admin-mode and user-mode with the set of permissions enabled for a group.
+:::
+
+<!--
+## User Group permissions
+
+ABRT provides a centralized repository to store and retrieve all types of Agilent reports. These reports are secured with restricted access to users based on their roles and privileges.
+Admins can <Link to={useBaseUrl('docs/admin-mode/user-access')}>manage user access</Link> for each report.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Agilent Log-in screen"
+      src={useBaseUrl("admin/user-add-agilent.png")}
+    />
+  </Zoom>
+  <p>Agilent Log-in Screen</p>
+</div>
+-->
+
+## Next Steps
+
+Log-in to the Agilent platform as a Power user.

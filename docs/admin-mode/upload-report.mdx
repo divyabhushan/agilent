@@ -1,0 +1,93 @@
+---
+id: upload-report
+title: Upload Report
+sidebar_label: Upload Report
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+To upload a report to the instances already created in the ABRT platform:
+* Click **Upload Report**
+* In the "Upload Report" pop-up, click **Upload a File** and select the report from your storage location.
+  <div class="center">
+    <Zoom>
+      <img
+        alt="Upload a report"
+        src={useBaseUrl("admin/upload-report.png")}
+      />
+    </Zoom>
+    <p>Upload Report</p>
+  </div>
+
+ - The report name format for a web report is `<Report Name>_<Segment Name>_<Period>.extension`, and mobile report is `BB#_<Report Name>_<Segment Name>_<Period>.extension`.
+ - 
+   - The below screenshot uploads a report with the name: `Raw Materials_Resources_Q2.docx`.
+
+  <div class="center">
+    <Zoom>
+      <img
+        alt="Upload a report"
+        src={useBaseUrl("admin/upload-report-classify.png")}
+      />
+    </Zoom>
+    <p>Upload a report</p>
+  </div>
+ - The filename is split into 3 sections: a) Report Name, b) Segment, and c) Period.
+
+The example "Raw Materials" report is stored in "Resources" segment for "Q2" period.
+- Click **Upload**.
+
+> User can choose to fill out the **Review Notification Owner** form.
+
+### Report Review
+
+Go to **My Organization > Reports** and click **Report Review** to trigger a review email.
+
+- In the **Review Notification Owner** pop-up, enter all the required fields.
+:::important
+Enter the correct Report Name, Segment, and Period values.
+:::
+
+  <div class="center">
+    <Zoom>
+      <img
+        alt="Review Notification Owner form"
+        src={useBaseUrl("admin/review-notification.png")}
+      />
+    </Zoom>
+    <p>Review Notification Owner form</p>
+  </div>
+- Click **Submit**.
+
+The uploaded report is emailed to the reviewer: 
+  <div class="center">
+    <Zoom>
+      <img
+        alt="Report upload status mail"
+        src={useBaseUrl("admin/review-mail.png")}
+      />
+    </Zoom>
+    <p>Report upload status mail</p>
+  </div>
+
+### Upload Report Errors
+
+As a security feature, the upload may fail due to the following reasons:
+* <i id="error">You don't have the permission to upload this report</i>: Admin has to explicitly <Link to={useBaseUrl('docs/admin-mode/user-access')}>assign user access on the report</Link>.
+* <i id="error">The period is Frozen/Archived. Please contact the Administrator.</i>: <Link to={useBaseUrl('docs/admin-mode/reports#manage-periods')}>Manage the periods</Link> to un-freeze or un-archive the selected period.
+* <i id="error">Report not found for the uploaded file</i>: Either the instance does not exists or the combination of segment and period is incorrect. Check the <Link to={useBaseUrl('docs/admin-mode/reports')}>Reports</Link> section.
+
+<div class="center">
+  <Zoom>
+     <img
+        alt="Upload Report errors"
+        src={useBaseUrl("admin/report-upload-errors.png")}
+      />
+  </Zoom>
+  <p>Upload Report errors</p>
+</div>
+
+

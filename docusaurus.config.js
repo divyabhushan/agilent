@@ -1,109 +1,67 @@
 module.exports = {
-  title: 'Agilent ABRT Reports',
-  tagline: 'Integrated BIHub platform for ABRT Reports',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  title: "Agilent Documentation",
+  tagline: "Integrated BIHub platform for ABRT Reports",
+  url: "https://your-docusaurus-test-site.com",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "divyabhushan", // Usually your GitHub org/user name.
+  projectName: "agilent", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Agilent',
+      title: "Agilent",
+      style: 'primary',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/agilent_logo.png',
-        href: 'https://www.agilent.com/',
+        alt: "My Site Logo",
+        src: "img/agilent_logo.png",
+        href: "https://www.agilent.com/",
       },
       hideOnScroll: true,
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          title: 'Docs Home',
-          position: 'left',
+          to: "/",
+          label: "Docs",
+          title: "Docs Home",
+          position: "left",
         },
         {
-          to: 'docs/admin-mode/doc3',
-          activeBasePath: 'docs',
-          label: 'Admin Mode',
-          position: 'right',
-        },        
+          to: "docs/admin-mode/welcome",
+	        activeBaseRegex: 'admin',          
+          label: "Administration",
+          position: "right",
+        },
         {
-          to: 'docs/user-mode/add-edit-report',
-          activeBasePath: 'docs',
-          label: 'User Mode',
-          position: 'right',
-
-        },        
+          to: "docs/user-mode/welcome",
+	        activeBaseRegex: "user-mode",          
+          label: "Reports",
+          position: "right",
+        },
       ],
     },
     footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Style Guide',
-              to: 'docs/',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: '#',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
+      style: "dark",
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            "https://github.com/facebook/docusaurus/edit/master/website/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            "https://github.com/facebook/docusaurus/edit/master/website/blog/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],

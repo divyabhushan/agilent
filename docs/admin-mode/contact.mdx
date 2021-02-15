@@ -1,0 +1,46 @@
+---
+id: contact
+title: Contact
+sidebar_label: Contact
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+An admin can manage the Support Ticket settings in the **Contact** section.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Support Ticket Management"
+      src={useBaseUrl("admin/contact-manage.png")}
+    />
+  </Zoom>
+  <p>Support Ticket Management</p>
+</div>
+
+* Enter the Cc Email Ids to send the Mobile Reports and Report review updates and click **Save**.
+* Click **Add New** to add a support user.
+
+ <div class="center">
+  <Zoom>
+    <img
+      alt="All Reports uploads period-wise"
+      src={useBaseUrl("admin/add-support-user.png")}
+    />
+  </Zoom>
+  <p>All Reports uploads period-wise</p>
+ </div>
+
+  - Subject: Mail body subject
+  - Support Email Ids
+  - Cc Email Ids
+  - Enable Report Selection: Select this checkbox to allow the users to select and pick the respective report name from the drop-down list while <Link to={useBaseUrl('docs/user-mode/contact-us')}>raising the support ticket</Link>.
+
+* Click **Add**.
+
+* Click the Edit ( <img height="15" src={useBaseUrl("static/img/edit.svg")}/> ) icon to **Edit Support User**.
+
+* Click the Delete ( <img height="15" src={useBaseUrl("static/img/delete.svg")}/> ) icon to delete the support data.

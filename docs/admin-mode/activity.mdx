@@ -3,3 +3,143 @@ id: activity
 title: Activity
 sidebar_label: Activity
 ---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+In the **Activity** page, an Admin can view and manage all the report's activities in the ABRT platform.
+
+1. [All Uploads](#all-uploads)
+1. [All Mobile Subscriptions](#all-mobile-subscriptions)
+1. [Download Reports](#download-reports)
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="All Reports uploads period-wise"
+      src={useBaseUrl("admin/activity.png")}
+    />
+  </Zoom>
+  <p>All Reports uploads period-wise</p>
+</div>
+
+## All Uploads
+
+The reports uploaded by all the users are categorized and saved period-wise on this page.
+Open each folder to view a list of reports with the parameters: **Report Name**, **Last Updated** (date and time), **Segments**, **Type** (Web or Mobile), **File Size** (uploaded report size), **Uploaded By** (report's owner).
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Reports uploads activity log"
+      src={useBaseUrl("admin/activity-2018.png")}
+    />
+  </Zoom>
+  <p>Reports uploads activity log</p>
+</div>
+
+You can filter/sort the logs based on - **Report Name, Segments, Type**, and **Uploaded By** username.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Activity logs filtered Report Name, and Segments"
+      zoom = "200%"
+      src={useBaseUrl("admin/filter-activity-1.jpg")}
+    />
+  </Zoom>
+  <p>Activity logs filtered by Report Name, and Segments</p>
+</div>
+
+You can also select multiple Segments, and the reports that exist in these segments will be listed.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Activity logs filtered by Type, and Uploaded By user"
+      zoom = "200%"
+      src={useBaseUrl("admin/filter-activity-2.jpg")}
+    />
+  </Zoom>
+  <p>Activity logs filtered by Type, and Uploaded By user</p>
+</div>
+
+Similarly, you can select reports for both Mobile and Web Types.
+
+## All Mobile Subscriptions
+
+Admin can fetch the mobile subscription logs for any user and manage the subscriptions.
+
+* Select Users from the drop-down list, and click **Submit**.
+
+ <div class="center">
+  <Zoom>
+    <img
+      alt="Activity logs filtered by Type, and Uploaded By user"
+      zoom = "200%"
+      src={useBaseUrl("admin/mobile-subs.png")}
+    />
+  </Zoom>
+  <p>Activity logs filtered by Type, and Uploaded By user</p>
+ </div>
+
+ The result shows the **Report Name**, **Segments**, and **Frequency Subscribed** by the user.
+* Click **Manage Subscription**
+  1. Select the **Report Name** from the drop-down menu
+ <div class="center">
+  <Zoom>
+    <img
+      alt="Manage mobile subscription segments"
+      zoom = "200%"
+      src={useBaseUrl("admin/manage-subs.png")}
+    />
+  </Zoom>
+  <p>Manage mobile subscription segments</p>
+ </div>
+
+  1. Select the Segments and click **Next**.
+    > The Segments will be available as per the report name that you choose.
+  1. Next, select/de-select the mobile subscription frequency for the segments.
+ <div class="center">
+  <Zoom>
+    <img
+      alt="Mobile subscription frequency selection"
+      zoom = "200%"
+      src={useBaseUrl("admin/select-freq.png")}
+    />
+  </Zoom>
+  <p>Mobile subscription frequency selection</p>
+ </div>
+  1. Click **Save**.
+
+:::important
+Admin can manage the subscription frequency while creating a new mobile report.
+:::
+
+## Download Reports
+
+An Admin can search and download the web and mobile reports. Enter the name of the report in the search box and click **Search Files**.
+
+* For web report(s) follow the format `<Report name>_<Segment name>_<Period>.extension`, and for mobile report(s) - `BB#_<Report name>_<Segment name>_<Period>.extension`.
+
+> You can search for the whole name or just a part of the report/segment or period name. The search string is case-insensitive.
+> A list of all the reports matching your search string(regex) will be displayed.
+
+ <div class="center">
+  <Zoom>
+    <img
+      alt="List of reports that you can download"
+      zoom = "200%"
+      src={useBaseUrl("admin/search-download.png")}
+    />
+  </Zoom>
+  <p>List of reports that you can download</p>
+ </div>
+
+Click **Download** against the Report.
+
+:::note
+You can even download the deleted reports in this section.
+:::

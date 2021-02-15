@@ -1,0 +1,44 @@
+---
+id: user-access
+title: Manage User's Access
+sidebar_label: Users
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+Admin must explicitly grant access to users on segments, categories, and reports.
+Users can then view and download the reports.
+
+* Go to **My Organization > Users** tab.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Manage User Access"
+      src={useBaseUrl("admin/user-access.png")}
+    />
+  </Zoom>
+  <p>Manage User Access</p>
+</div>
+
+> This is a list of all the agilent users added by <Link to={useBaseUrl('docs/admin-mode/user-access')}>WindowsAD Group(s)</Link>.
+
+* Click **Manage Access** against the username:
+  - In the left pane, select  the segments
+  - For each segment, enable/disable the category(ies) and report(s) in the right pane.
+  - Click **Update**.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="enable segments/reports for the user"
+      src={useBaseUrl("admin/segment-permission.png")}
+    />
+  </Zoom>
+  <p>Enable segments/reports for the user</p>
+</div>
+
+The selected user will have access to only the chosen <Link to={useBaseUrl('docs/user-mode/abrt')}>ABRT segment, category, and reports</Link>.

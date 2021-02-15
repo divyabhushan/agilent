@@ -57,8 +57,9 @@ html[data-theme="dark"] .features:hover {
 }
 
 .features img {
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  height: 150px;
 }
 
 .features p, .features h3{
@@ -66,7 +67,9 @@ html[data-theme="dark"] .features:hover {
 }
 
 html[data-theme="dark"] .features p,
-html[data-theme="dark"] .features h3 {
+html[data-theme="dark"] .features h3,
+html[data-theme="dark"] .heroBanner a
+{
   color: #f5f6f7;
 }
 

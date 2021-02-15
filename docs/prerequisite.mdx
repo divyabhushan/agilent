@@ -1,0 +1,37 @@
+---
+id: prerequisite
+title: Pre-requisite
+sidebar_label: Pre-requisite
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+- :white_check_mark: BI Hub Server installed and configured
+- :white_check_mark: BI Hub Web installed and configured for Agilent Agent
+- :white_check_mark: BI Hub App installed and configured
+
+## Log-in to ABRT Platform
+
+Log-in to your BI Hub application with a super admin account.
+A super admin is the most privileged role and suitable only for initial configuration and for creating other admins.
+
+* Go to BI Hub URL at `https://<BI Hub Web full URL>` (if SSL is enabled) or `http://<BI Hub Web full URL>` (if SSL is not enabled).
+* In the BI Hub login page login as `bihubadmin` with the password as - `password`.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Agilent Log-in screen"
+      src={useBaseUrl("admin/agilent-login.png")}
+    />
+  </Zoom>
+  <p>Agilent Log-in Screen</p>
+</div>
+
+## Next Steps
+
+<Link to={useBaseUrl('docs/admin-mode/welcome')}>Administer the ABRT Platform</Link>.
+

@@ -26,7 +26,7 @@
 
 html[data-theme="dark"] h1.hero__title,
 html[data-theme="dark"] p.hero__subtitle {
-    color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 * {
@@ -39,12 +39,12 @@ html[data-theme="dark"] p.hero__subtitle {
   padding: 40px 40px 20px 20px;
   border: 2px solid #fefefe;
   border-radius: 10px;
-  color: rgb(33,175,144);
-  transition: box-shadow .3s;
+  color: rgb(33, 175, 144);
+  transition: box-shadow 0.3s;
 }
 
-.box:hover{
-  box-shadow: 0 0 15px rgba(33, 33, 33, .2);
+.box:hover {
+  box-shadow: 0 0 15px rgba(33, 33, 33, 0.2);
 }
 
 .clearfix::after {
@@ -64,10 +64,10 @@ img[alt="icon"] {
   text-align: center;
   position: center;
   padding: 0px 70px;
-  width: 80%; 
+  width: 80%;
 }
 
-.center p{
+.center p {
   text-align: center;
   color: slategray;
 }
@@ -76,4 +76,30 @@ img[alt="icon"] {
   border: 2px solid blue;
   border-radius: 10px;
   padding: 10px;
+}
+
+.cell {
+  text-align: center;
+  border-style: none;
+}
+
+caption { 
+  display: table-caption;
+  text-align: center;
+  caption-side: bottom;
+}
+
+.rect {
+  border-radius: 0px;
+  font: 400 13.3333px Arial;
+  color: rgb (25,120,210);
+}
+
+#error {
+  font-style: inherit;
+  color: red;
+}
+
+sup {
+  color: gray;
 }

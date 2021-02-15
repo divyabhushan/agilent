@@ -1,0 +1,30 @@
+---
+id: admin
+title: Administration
+sidebar_label: Administration
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+
+To administer an ABRT platform, a Power user must:
+
+* Assign access control on reports/segments to users and groups
+* Create and configure reports and segments in the BI platform.
+
+Admin tasks are categorized in the BI Hub app in the following sections:
+
+1. <Link to={useBaseUrl('docs/admin-mode/activity')}>Activity</Link>: View and manage period-wise activity logs for web and mobile reports. Search and download reports.
+1. <Link to={useBaseUrl('docs/admin-mode/reports')}>My Organization</Link>: Create report instances, and organize the reports in Category, Segments, and Periods.
+
+   * Reports: Create, upload, download, and delete reports.
+   * Segments: Create segments, and control segment-level access on the reports.
+   * Contact: Support Ticket Management.
+   * User: Manage user access on segments and reports.
+1. <Link to={useBaseUrl('docs/admin-mode/reviews')}>Reviews</Link>: Approve/reject the reports created by other users.
+1. <Link to={useBaseUrl('docs/admin-mode/reviews')}>Metrics</Link>: Reports summary fetched from the database based on selected parameters
+1. <Link to={useBaseUrl('docs/admin-mode/reviews')}>Issue Log</Link>: Manage issues logged by the users.
+
+:::important
+A Power user (with all the privileges) must carry out the administration tasks mentioned in this section.
+:::
