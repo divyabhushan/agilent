@@ -1,0 +1,34 @@
+---
+id: welcome
+title: ABRT Login Screen
+sidebar_label: ABRT Login Screen
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+The welcome screen displays the Agilent Insider Warning message for all users.
+
+<div class="center">
+  <Zoom>
+    <img alt="Agilent Welcome screen" src="/img/welcome.png" />
+  </Zoom>
+  <p>Agilent Welcome Screen</p>
+</div>
+
+Only an _Admin (or <Link to={useBaseUrl('docs/admin-mode/user-group#create-power-users')}>power user</Link>)_ can edit the welcome message in plain HTML format by clicking on the **Edit** button at the top right corner.
+
+<div class="center">
+  <Zoom>
+    <img alt="Edit Agilent Welcome Screen" src="/img/edit-welcome-msg.png" />
+  </Zoom>
+  <p>Edit Agilent Welcome Screen</p>
+</div>
+
+Click **Save** and your changed message will be displayed on every user's **Welcome** page and in the **BI Platform** page every time the user logs-out and logs-in back to the BI Platform.
+
+## Next Steps
+
+<Link to={useBaseUrl('docs/admin-mode/user-group')}>Synchronize Agilent users from WindowsAD</Link> platform, and assign segments and reports to users.

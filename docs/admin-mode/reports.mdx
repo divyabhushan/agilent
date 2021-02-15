@@ -9,4 +9,225 @@ import Link from "@docusaurus/Link";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
-Welcome screen
+Log-in to BI Hub Agilent platform as a Power user to manage and configure the report infrastructure.
+The **My Organization > Reports** section has the following features:
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Reports Management"
+      src={useBaseUrl("admin/reports-welcome.png")}
+    />
+  </Zoom>
+  <p>Reports Management</p>
+</div>
+
+1. [Categories](#categories): Group and categorize similar reports as per functional/business needs.
+1. [Manage Periods](#manage-periods): Each report is traced based on the time-period.
+1. [Reports Management](#reports-management): Report management (add/download/delete).
+
+## Categories
+
+To define a new category of reports, click **Add Category**, enter the category name in the box and hit _Enter_. Use the "Edit" ( <img height="15" src={useBaseUrl("static/img/edit.svg")}/> ) icon to rename a category and "Delete" ( <img height="15" src={useBaseUrl("static/img/delete.svg")}/> ) icon to remove a category from the list.
+
+<div class="center">
+  <Zoom>
+    <img
+      height="400"
+      alt="Add Category"
+      src={useBaseUrl("admin/add-category.png")}
+    />
+  </Zoom>
+  <p>Add Category</p>
+</div>
+
+Admins can now group similar reports based on the above-defined categories.
+
+:::warning
+If you delete a category all the associated reports and their instances will also be deleted. You can still download the deleted reports from the <Link to={useBaseUrl('docs/admin-mode/activity#download-reports')}>Download Reports</Link> Activity section.
+:::
+
+## Manage Periods
+
+Time-periods are managed under **My Organization > Reports > Manage Periods** section.<br></br>
+The periods are classified as "Monthly", "Quarterly", and "Yearly" labels. Click on the appropriate tab, and click **Add Period** to enter the _Period title (Period name)_ and click **Save**.
+
+<div class="center">
+  <Zoom>
+    <img alt="Manage Periods" src={useBaseUrl("admin/add-period.png")} />
+  </Zoom>
+  <p>Add a new Period</p>
+</div>
+
+Once the periods are defined for each label, an Admin can:
+
+- **Freeze** ( <img height="15" src={useBaseUrl('img/lock-closed.svg')}/> ): Freezing a period would prevent any report uploads to this period. In the below screenshot, period "2017" is frozen.
+- **Edit** ( <img height="15" src={useBaseUrl('img/edit.svg')}/> ): the period name. The reports uploaded to the edited periods are not affected.
+- **Delete** ( <img height="15" src={useBaseUrl('img/delete.svg')}/> ): a period to remove it permanently. The reports associated with the deleted period will be lost.
+- **Archive** ( <img height="15" src={useBaseUrl('img/archive.svg')}/> ): a period to restrict the download and uploading any reports 
+for this period. "2016" is an archived period in the screenshot below.
+
+<!--
+<div class="center">
+  <Zoom>
+    <img
+      height="350"
+      alt="Edit period properties"
+      src={useBaseUrl("admin/period-properties.png")}
+    />
+  </Zoom>
+  <p>Edit period properties</p>
+</div>
+-->
+Admins can now upload the reports to respective periods added in this section.
+
+## Reports Management
+
+The **Reports** section allows the Admins to create a basic centralized CMS-like infrastructure for the reports.<br></br>
+A snapshot instance of the report is created, managed, and organized across different segments and periods.<br></br>
+Admins must upload/delete the reports following the same combinations of report-segment-period.
+There are 2 types of reports:
+1. **Web Reports**
+
+ Admin uploads the reports following a `<Report Name>_<Segment Name>_<Period>` matrix. Admin then grants access to the users to download the report(s).
+
+1. **Mobile Reports**
+
+ Users cannot download the mobile reports directly from Agilent web app. The users must explicitly subscribe to these reports. The users receive the subscribed mobile reports in the email.
+
+### Add Report
+
+Add a report and define the attributes(values). 
+- Select a Category to add and group similar reports.
+- Click **Add Report**, and enter the **Report Name**, **Report Type** (Web or Mobile), **Period Type** (Monthly, Quarterly, Yearly), **Start Period** (no periods beyond the selected time-period).
+
+### 1. Create a Web Report
+
+Select the **Report Type** as "Web" and enter all the field values.
+
+  <div class="center">
+    <Zoom>
+      <img alt="Add a new web report" src={useBaseUrl("admin/add-web-report.png")} />
+    </Zoom>
+    <p>Create a Web report</p>
+  </div>
+
+A new web report named "Raw Materials" is created in the "Empoloyee" category.
+
+### 2. Create a Mobile Report
+
+Select the **Report Type** as "Mobile".
+
+- **Parent Report Name** is a mandatory field. Select an existing web report name as the parent.
+> Each mobile (child) report binds to its parent web report.
+> You can have multiple mobile reports linked to a single web report.
+
+- **Select Frequency**: of the mobile upload.
+
+  <div class="center">
+    <Zoom>
+      <img alt="Add a new mobile report" src={useBaseUrl("admin/add-mobile-report.png")} />
+    </Zoom>
+    <p>Create a Mobile report</p>
+  </div>
+
+## Reports and their attributes
+
+Following are the web and mobile reports:
+
+  <div class="center">
+    <Zoom>
+      <img
+        alt="Web and Mobile reports created"
+        src={useBaseUrl("admin/reports-created.png")}
+      />
+    </Zoom>
+    <p>Web and Mobile reports created</p>
+  </div>
+
+| Field       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Report Name | Name of the report                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Datasheet   | Document framework explaining what the report should contain. Click Upload ( <img height="15" src={useBaseUrl('static/img/upload.svg')}/> ) to upload the relevant datasheet.                                                                                                                                                                                                                                                                            |
+| Type        | Web or Mobile                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Period      | Monthly/Quarterly/Yearly                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Action      | <ul><li>Datasheet ( <img height="15" src={useBaseUrl("static/img/datasheet.svg")}/> ): Click to download the datasheet for the report.</li><li>Edit ( <img height="15" src={useBaseUrl("static/img/edit.svg")}/> ) the report properties except the Report/Period Type and Parent Report Name</li><li>Delete ( <img height="15" src={useBaseUrl("static/img/delete.svg")}/> ): Deletes the report across all the instances (segments/periods).</li></ul> |
+
+:::warning
+If you delete a web report that is linked (parent to) mobile report(s), this will also delete the child mobile report(s).
+:::
+
+## Next Steps
+
+An Admin must grant <Link to={useBaseUrl('docs/admin-mode/segment')}>access to reports in the respective segments</Link> after creating the reports.
+
+### Download Report
+
+To download any report, click **Download Report** and select the correct mapping to locate the report file uniquely.
+
+  <div class="center">
+    <Zoom>
+      <img
+        alt="Download Report"
+        src={useBaseUrl("admin/download-report.png")}
+      />
+    </Zoom>
+    <p>Download Report</p>
+  </div>
+
+The correct combination of Report Name, Segment, Period will fetch and download the desired report.
+
+  <div class="center">
+    <Zoom>
+      <img
+        height="50"
+        alt="Download Report"
+        src={useBaseUrl("admin/download-success.png")}
+      />
+    </Zoom>
+  </div>
+
+> If the download fails with the below message, ensure you have entered the correct parameters.
+  <div class="center">
+    <Zoom>
+      <img
+        height="50"
+        alt="Download Report"
+        src={useBaseUrl("admin/download-failed.png")}
+      />
+    </Zoom>
+  </div>
+In the <Link to={useBaseUrl('docs/user-mode/abrt')}>download the ABRT reports</Link> section, view the periods for which the reports are available.
+
+### Delete Report Instance
+
+Deleting a report instance will only delete the chosen instance of the report from the selected segment and period.
+The same report name may still exist in other segments/periods.
+
+- Click **Delete Report Instance**.
+- In the pop-up window, select the right combination of the Period(s), Report, Segment to delete the desired report.
+
+  <div class="center">
+    <Zoom>
+      <img
+        alt="Delete report instance"
+        src={useBaseUrl("admin/del-report-instance.png")}
+      />
+    </Zoom>
+    <p>Delete Report Instance</p>
+  </div>
+
+You can select multiple Periods, reports, and segments.
+Only the reports common to all the segments and periods will be selected and deleted.
+
+:::tip
+To delete a Report from all the segments/periods - select the Report name, and select all Period/Segment.
+:::
+
+:::warning
+Do not select all the parameters, as you may lose crucial reports.
+:::
+
+## Troubleshoot
+
+An admin can recover a deleted report from the <Link to={useBaseUrl('docs/admin-mode/activity#download-reports')}>Activity</Link> section.
