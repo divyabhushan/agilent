@@ -1,0 +1,38 @@
+---
+id: welcome
+title: First-time Log-in
+sidebar_label: First-time Log-in
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+In the **ABRT** Platform, a regular user is allowed limited access.
+Users can view and download the reports as mapped for the respective segment, category, and periods by the Admins.
+
+Go to BI Hub URL at `https://<BI Hub Web full URL>` (if SSL is enabled) or `http://<BI Hub Web full URL>` (if SSL is not enabled) and log-in.
+
+<div class="center">
+    <Zoom>
+        <img src={useBaseUrl('user/first-log-in.png')}/>
+    </Zoom>
+    <p></p>
+</div>
+
+In the **BI Platform > ABRT Reports** section, the "Agilent Insider Warning" is displayed on the first-time log-in and once every user's session.
+
+<div class="center">
+    <Zoom>
+        <img 
+        alt="Agilent Warning Message in BI Platform screen" 
+        src={useBaseUrl('user/agilent-biplatform-user.png')}
+        />
+    </Zoom>
+    <p>Agilent Warning Message in BI Platform screen</p>
+</div>
+
+The same message is also displayed in the **Welcome** screen for every user.
+
+> This message can only be edited by an Admin.
