@@ -1,0 +1,56 @@
+---
+id: abrt
+title: ABRT Web Reports
+sidebar_label: ABRT Web Reports
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
+Agilent users access the ABRT reports in the **BI Platform** section.
+Only the reports that the logged-in user has access to are visible here.
+
+The reports are categorized and listed under **Segments**, and each _Segment_ may have sub-levels.
+From the top-level _Segment_ menu select and click the _Segment_ name.
+The reports are now listed **Category** wise.
+
+The users can select the Segments > Category to view the Reports.
+Select the Periods for which the reports are available and download the reports.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Agilent Log-in screen"
+      src={useBaseUrl("user/abrt-agilent-l3-report.png")}
+    />
+  </Zoom>
+  <p>Agilent Log-in Screen</p>
+</div>
+
+In the Periods column, click **Previous** to expand all the periods list.
+
+In the **Info** column, the user can download the **Datasheet** ( <img src={useBaseUrl('static/img/datasheet.png')}/> ) and Send Report Notification ( <img height="15" src={useBaseUrl('static/img/wifi.svg')}/> ).
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Send Report Notification"
+      src={useBaseUrl("user/send-report-notification.png")}
+    />
+  </Zoom>
+  <p>Send Report Notification</p>
+</div>
+
+Following are the Send Report Notification form fields:
+
+| Field Name           | Description |
+|----------------------|-------------|
+| Report Name          |             |
+| Notification Subject |             |
+| Notification Message |             |
+| Users                |             |
+| Selected Users       |             |
+
+Click **Send**.
