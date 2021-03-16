@@ -18,7 +18,7 @@ An Admin must grant access to the user on the respective Web report(parent). Ref
 ## Subscribe to the mobile report
 
 * Go to **BI Platform > ABRT Reports** and click on **Mobile Reports**.
-* Click the Bell icon ( <img height="15" src={useBaseUrl("static/img/bell.svg")}/> ) next to the report.
+* Click the Bell icon ( <img height="15" src={useBaseUrl("img/bell.svg")}/> ) next to the report.
 * Select the segments and click **Next**.
  > You can only select the segments that you have access to.
 * Select the Frequency of subscription.
@@ -40,7 +40,7 @@ Sample mail screenshot
 
 ## Send Mobile Notification
 
-You can also trigger the mobile notification by clicking the **Send Notification** ( <img height="15" src={useBaseUrl("static/img/wifi.svg")}/> ) icon next to the report.
+You can also trigger the mobile notification by clicking the **Send Notification** ( <img height="15" src={useBaseUrl("img/wifi.svg")}/> ) icon next to the report.
 
 <div class="center">
   <Zoom>
