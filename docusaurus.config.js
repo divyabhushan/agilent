@@ -2,7 +2,7 @@ module.exports = {
   title: "Agilent Documentation",
   tagline: "Integrated BIHub platform for ABRT Reports",
   url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  baseUrl: "/agilent/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",

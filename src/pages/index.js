@@ -15,7 +15,7 @@ const features = [
       "Introduction to ABRT Platform and pre-requisites information",
   },
   {
-    link: "docs/admin-mode/user-group",
+    link: "docs/admin-mode/welcome",
     title: "ABRT Administration",
     image: "img/admin.svg",
     description:
