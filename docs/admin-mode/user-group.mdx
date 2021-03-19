@@ -14,12 +14,12 @@ An Admin creates *Groups* with specific permissions and then assigns users to th
 
 Agilent user types based on their roles:
 
-| User            | Description                                                                                                                                                  |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Super Admin** | User ( most privileged) configured while installing BI Hub. Super Admin is added to the "Admin" group and is the default user.                               |
-| **Admin**       | User added to the "Admin" group by the Super Admin. Admins cannot modify "admin" group permissions, nor can add other Admins. Have both admin and user mode. |
-| **Power Users** | User added to a custom group by an Admin. Have both admin and user mode. Power users cannot modify group permissions.                                        |
-| **User**        | This is a regular user with just user-mode.                                                                                                                  |
+| User            | Description                                                                                                                                                                                                                |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Super Admin** | User ( most privileged) configured while installing BI Hub. Super Admin is added to the "Admin" group and is the default user.                                                                                             |
+| **Admin**       | User added to the "Admin" group by the Super Admin and granted all the privileges like a Super admin. Except that Admins cannot modify "admin" group permissions, nor can add other Admins. Have both admin and user mode. |
+| **Power User**  | Special user added by an Admin. A Power user can perform all the assigned admin tasks, except they cannot modify the group permissions. A Power user has both admin and user mode.                                         |
+| **User**        | This is a regular user with just user-mode.                                                                                                                                                                                |
 ## Before you begin
 
 Log-in to BI Hub as a Super Admin with username as `bihubadmin`, and password as `password`.
@@ -86,68 +86,205 @@ screenshot - pop-up
 Admins must also create one or more Power users.
 Admins must grant power users just a minimum set of permissions to administer the users/groups and ABRT reports.
 
-A better approach is to create a custom group with a limited subset of the admin privileges and then add the power users to this custom group.
+A better approach is to create a customized user group with a limited subset of the admin privileges and then add the power users to this user group.
 
-### 1. Create Agilent Custom Groups
+### 1. Create Agilent User Groups
 
 Log-in as an Admin and click **Admin Mode** at the top right corner.
 
 * Go to **User Manager > Manage User Groups**
 * Click **Add User Group**.
 * Enter a Group's name and click **Create**.
-* Click **Manage Permissions** next to your custom group. 
+* Click **Manage Permissions** next to the user group. 
 * Enable the desired permissions for a group.
 
 screenshot
-* Following are the available permissions:
+
+Following are the available permissions:
+
+<sup>*</sup>: To access the agilent features, allow access to the dependent permission.
+
+> If you disable the dependent permission<sup>*</sup>, all the dependent Agilent features will be grayed out.
 
 <table>
         <tr>
-            <th colspan="2">Agilent Features</th>
-            <th>Permissions</th>
+            <th>Dependent Permission<sup>*</sup></th>
+            <th>Agilent Permissions</th>
+            <th>Description</th>
         </tr>
         <tr>
-            <td rowspan="4">Report Management</td>
+            
         </tr>
         <tr>
+            <td rowspan="14">Report Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
             <td>Upload Report Instance</td>
-            <td> </td>
+            <td><Link to={useBaseUrl('docs/admin-mode/upload-report')}>Upload Report(Web/Mobile) Instances</Link></td>
         </tr>
         <tr>
             <td>Delete Report Instance</td>
-            <td> </td>
+            <td>Select and <Link to={useBaseUrl('docs/admin-mode/reports#delete-report-instance')}>delete the Report Instance</Link></td>
         </tr>
         <tr><td>Create Category</td><td> </td></tr>
         <tr>
-            <td rowspan="4">Segment Management</td>
+            <td>Edit Category</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Delete Category</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Create Report</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>View Report</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Edit Report</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Delete Report</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Create Period</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Freeze Period</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Edit Period</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Delete Period</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Archive Period</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="4">Segment Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
             <td>Add Segment</td>
             <td> </td>
         </tr>
         <tr><td>Edit Segment</td><td> </td></tr>
         <tr><td>Delete Segment</td><td> </td></tr>
         <tr><td>Edit Segment Report Permission</td><td> </td></tr>
-        <tr>
-            <td rowspan="3">Support Management</td>
-            
-            <td>Edit Support Management</td><td> </td>
-        </tr>
-        <tr>
-            <td></td><td> </td>
-        </tr>
-        <tr>
-            <td></td><td> </td>
-        </tr>
-        <tr>
-            <td>User Management</td>
+        <tr>                        
+            <td rowspan="2">Support Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
+            <td>Edit Support Management</td>
             <td></td>
-            <td> </td>
         </tr>
         <tr>
-            <td>User Group</td>
+            <td>Delete Support Management</td>
             <td></td>
-            <td> </td>
         </tr>
+        <tr>
+            <td rowspan="3">User Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
+            <td>Edit User Access</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Manage AD Group</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Edit AD Group</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="4">User Group <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
+            <td>Create User Group</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Edit User Group</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Delete User Group</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Manage User Group</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>View Activity</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Upload Datasheet</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Send Report Review</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Manage Report Review</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Send Report Notification</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Manage Subscription</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Send Mobile Notification</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Edit Welcome Page</td>
+            <td></td>            
+        </tr>  
+        <tr>
+            <td>N/A</td>
+            <td>View Issue Log</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>Edit Issue Log</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>N/A</td>
+            <td>View Subscription</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>Download Report</td>
+            <td></td>
+        </tr>        
+        <tr>
+            <td>N/A</td>
+            <td>View Metrics</td>
+            <td></td>
+        </tr>        
 </table>
+
+
+<sup>N/A</sup>: No dependent permission
 
 ### 2. Add users to the Custom group
 
