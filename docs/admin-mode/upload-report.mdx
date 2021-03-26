@@ -15,7 +15,7 @@ To upload a report to the instances already created in the ABRT platform:
   <div class="center">
     <Zoom>
       <img
-        alt="Upload a report"
+        alt="Upload report(s)"
         src={useBaseUrl("admin/upload-report.png")}
       />
     </Zoom>
@@ -23,21 +23,17 @@ To upload a report to the instances already created in the ABRT platform:
   </div>
 
  - The report name format for a web report is `<Report Name>_<Segment Name>_<Period>.extension`, and mobile report is `BB#_<Report Name>_<Segment Name>_<Period>.extension`.
- - 
-   - The below screenshot uploads a report with the name: `Raw Materials_Resources_Q2.docx`.
 
   <div class="center">
     <Zoom>
       <img
-        alt="Upload a report"
+        alt="Reports selected for upload"
         src={useBaseUrl("admin/upload-report-classify.png")}
       />
     </Zoom>
-    <p>Upload a report</p>
+    <p>Reports selected for upload</p>
   </div>
  - The filename is split into 3 sections: a) Report Name, b) Segment, and c) Period.
-
-The example "Raw Materials" report is stored in "Resources" segment for "Q2" period.
 - Click **Upload**.
 
 > User can choose to fill out the **Review Notification Owner** form.
@@ -70,11 +66,11 @@ The uploaded report is emailed to the reviewer:
   <div class="center">
     <Zoom>
       <img
+	width="500"
         alt="Report upload status mail"
         src={useBaseUrl("admin/review-mail.png")}
       />
     </Zoom>
-    <p>Report upload status mail</p>
   </div>
 
 ### Upload Report Errors

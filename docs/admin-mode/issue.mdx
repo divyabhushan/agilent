@@ -6,10 +6,20 @@ sidebar_label: Issue Log
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
-A log of all the <Link to={useBaseUrl('docs/user-mode/contact-us')}>issues raised by the users</Link> are listed and managed in this section.
+The logs of all the <Link to={useBaseUrl('docs/user-mode/contact-us')}>issues raised by the users</Link> are listed and managed in this section.
 
-screenshot
+<div class="center">
+  <Zoom>
+    <img
+      alt="Issue Logs"
+      src={useBaseUrl("admin/issue-log.png")}
+    />
+  </Zoom>
+  <p></p>
+</div>
 
-Admin can filter the logs based on **User Name, Type**, and **Status**, and change the status to "Open", "Pending", or "Closed".
+Admin can filter the logs based on **User Name, Issue Date**, and **Type of Issue**.
 Click **Export to CSV** to download the log details in a `.csv` format.

@@ -57,7 +57,7 @@ All the users from an assigned Group are added as Agilent users and listed in th
         <img alt="Agilent Users" src={useBaseUrl('admin/agilent-users.png')}
         />
     </Zoom>
-    <p>Agile Users</p>
+    <p>Agilent Users</p>
 </div>
 
 ## Create Admins
@@ -71,7 +71,13 @@ No other admin except `bihubadmin` is granted access to the **Admin** group and 
 * Go to **User Manager > Manage User Groups**
 * Select the **Admin** group, and click **ADD**.
 
-screenshot - pop-up
+<div class="center">
+    <Zoom>
+        <img alt="Create Admins" src={useBaseUrl('admin/create-admin.png')}
+        />
+    </Zoom>
+    <p>Add users as Admin</p>
+</div>
 
 * In the **Add user to group(s)** pop-up, select a user(s) from the list and click **ADD**.
 
@@ -95,101 +101,120 @@ Log-in as an Admin and click **Admin Mode** at the top right corner.
 * Go to **User Manager > Manage User Groups**
 * Click **Add User Group**.
 * Enter a Group's name and click **Create**.
-* Click **Manage Permissions** next to the user group. 
+* Select the group and click **Manage Permissions** next to the user group. 
+<div class="center">
+    <Zoom>
+        <img alt="Create user group" src={useBaseUrl('admin/create-user-group.png')}
+        />
+    </Zoom>
+    <p>Create custom user group</p>
+</div>
+
 * Enable the desired permissions for a group.
 
-screenshot
+<div class="center">
+    <Zoom>
+        <img alt="Agilent Permissions" src={useBaseUrl('admin/agilent-permissions.png')}
+        />
+    </Zoom>
+    <p>Agilent Permissions</p>
+</div>
 
 Following are the available permissions:
 
-<sup>*</sup>: To access the agilent features, allow access to the dependent permission.
+<sup>*</sup>: To access the agilent features, you must allow access to the prerequisite permission.
 
-> If you disable the dependent permission<sup>*</sup>, all the dependent Agilent features will be grayed out.
+> If you disable the prerequisite permission<sup>*</sup>, all the dependent Agilent features will be grayed out.
 
-<table>
+<table id="lastrow">
         <tr>
-            <th>Dependent Permission<sup>*</sup></th>
             <th>Agilent Permissions</th>
             <th>Description</th>
+            <th>Prerequisite Permission<sup>*</sup></th>
         </tr>
         <tr>
             
         </tr>
         <tr>
-            <td rowspan="14">Report Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
+            <td>Report Management</td>
+            <td>Manage Reports/Segments/Periods</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
             <td>Upload Report Instance</td>
             <td><Link to={useBaseUrl('docs/admin-mode/upload-report')}>Upload Report(Web/Mobile) Instances</Link></td>
+            <td rowspan="14">Report Management</td>
         </tr>
         <tr>
             <td>Delete Report Instance</td>
             <td>Select and <Link to={useBaseUrl('docs/admin-mode/reports#delete-report-instance')}>delete the Report Instance</Link></td>
         </tr>
-        <tr><td>Create Category</td><td> </td></tr>
+        <tr><td>Create Category</td><td>Create <Link to={useBaseUrl('docs/admin-mode/reports#categories')}>Categories</Link> to group similar reports</td></tr>
         <tr>
             <td>Edit Category</td>
-            <td></td>
+            <td>Rename a Category</td>
         </tr>
         <tr>
             <td>Delete Category</td>
-            <td></td>
+            <td>Delete a Category and the reports added to it</td>
         </tr>
         <tr>
             <td>Create Report</td>
-            <td></td>
+            <td><Link to={useBaseUrl('#')}>Create Web and Mobile Reports</Link></td>
         </tr>
         <tr>
             <td>View Report</td>
-            <td></td>
+            <td>View all the web/mobile Reports</td>
         </tr>
         <tr>
             <td>Edit Report</td>
-            <td></td>
+            <td>Edit Report's Name, Start Period and Frequency(Mobile)</td>
         </tr>
         <tr>
             <td>Delete Report</td>
-            <td></td>
+            <td>Delete a selected Report with the Period-Report-Segment combination</td>
         </tr>
         <tr>
             <td>Create Period</td>
-            <td></td>
+            <td>Add a new Period</td>
         </tr>
         <tr>
             <td>Freeze Period</td>
-            <td></td>
+            <td>Freeze the upload of reports for the selected Period(s)</td>
         </tr>
         <tr>
             <td>Edit Period</td>
-            <td></td>
+            <td>Edit the Period's name</td>
         </tr>
         <tr>
             <td>Delete Period</td>
-            <td></td>
+            <td>Remove a Period and the reports uploaded for that period</td>
         </tr>
         <tr>
             <td>Archive Period</td>
-            <td></td>
+            <td>Restrict both upload and download of reports for the Period</td>
         </tr>
         <tr>
-            <td rowspan="4">Segment Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
             <td>Add Segment</td>
-            <td> </td>
+            <td><Link to={useBaseUrl('docs/admin-mode/segment')}>Add Segment(s)</Link> to classify reports into sub-divisions</td>
+            <td rowspan="4">Segment Management</td>
         </tr>
-        <tr><td>Edit Segment</td><td> </td></tr>
-        <tr><td>Delete Segment</td><td> </td></tr>
-        <tr><td>Edit Segment Report Permission</td><td> </td></tr>
+        <tr><td>Edit Segment</td><td>Rename a Segment</td></tr>
+        <tr><td>Delete Segment</td><td>Delete a Segment(s)</td></tr>
+        <tr><td>Edit Segment Report Permission</td><td>Enable/disable Segment-level Report access</td></tr>
         <tr>                        
-            <td rowspan="2">Support Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
             <td>Edit Support Management</td>
             <td></td>
+            <td rowspan="2">Support Management</td>
         </tr>
         <tr>
             <td>Delete Support Management</td>
             <td></td>
         </tr>
         <tr>
-            <td rowspan="3">User Management <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
             <td>Edit User Access</td>
             <td></td>
+            <td rowspan="3">User Management</td>
         </tr>
         <tr>
             <td>Manage AD Group</td>
@@ -200,9 +225,9 @@ Following are the available permissions:
             <td></td>
         </tr>
         <tr>
-            <td rowspan="4">User Group <img height="15" src={useBaseUrl('img/check-circle.svg')} /></td>
             <td>Create User Group</td>
             <td></td>
+            <td rowspan="4">User Group</td>
         </tr>
         <tr>
             <td>Edit User Group</td>
@@ -217,84 +242,82 @@ Following are the available permissions:
             <td></td>
         </tr>
         <tr>
-            <td>N/A</td>
             <td>View Activity</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Upload Datasheet</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Send Report Review</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Manage Report Review</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Send Report Notification</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Manage Subscription</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Send Mobile Notification</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Edit Welcome Page</td>
             <td></td>            
+            <td>N/A</td>
         </tr>  
         <tr>
-            <td>N/A</td>
             <td>View Issue Log</td>
             <td></td>
+            <td>N/A</td>
         </tr>
         <tr>
-            <td>N/A</td>
             <td>Edit Issue Log</td>
             <td></td>
+            <td>N/A</td>
         </tr>
         <tr>
-            <td>N/A</td>
             <td>View Subscription</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>Download Report</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
         <tr>
-            <td>N/A</td>
             <td>View Metrics</td>
             <td></td>
+            <td>N/A</td>
         </tr>        
 </table>
 
 
-<sup>N/A</sup>: No dependent permission
+<sup>N/A</sup>: No prerequisite permission required
 
-### 2. Add users to the Custom group
+### 2. Add Users to the customized User Group
 
-* Select the custom group, and click **ADD**.
+* Select the User Group, and click **ADD**.
 * Search the username(s) and click **ADD**.
 
-screenshot
-
 :::important
-All the users(Power users) added to this custom group will have both admin-mode and user-mode with the set of permissions enabled for a group.
+All the users(Power users) added to this user group will have both admin-mode and user-mode with the set of permissions enabled for a group.
 :::
 
 <!--
@@ -316,4 +339,4 @@ Admins can <Link to={useBaseUrl('docs/admin-mode/user-access')}>manage user acce
 
 ## Next Steps
 
-Log-in to the Agilent platform as a Power user.
+Log-in to the Agilent platform as a Power user to administer the ABRT platform.

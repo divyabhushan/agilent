@@ -34,14 +34,14 @@ To define a new category of reports, click **Add Category**, enter the category 
   <Zoom>
     <img
       height="400"
-      alt="Add Category"
-      src={useBaseUrl("admin/add-category.png")}
+      alt="Manage Category"
+      src={useBaseUrl("admin/category-management.png")}
     />
   </Zoom>
-  <p>Add Category</p>
+  <p>Manage Categories</p>
 </div>
 
-Admins can now group similar reports based on the above-defined categories.
+Admins can group similar reports based on the above-defined categories.
 
 :::warning
 If you delete a category all the associated reports and their instances will also be deleted. You can still download the deleted reports from the <Link to={useBaseUrl('docs/admin-mode/activity#download-reports')}>Download Reports</Link> Activity section.
@@ -54,18 +54,17 @@ The periods are classified as "Monthly", "Quarterly", and "Yearly" labels. Click
 
 <div class="center">
   <Zoom>
-    <img alt="Manage Periods" src={useBaseUrl("admin/add-period.png")} />
+    <img alt="Manage Periods" src={useBaseUrl("admin/manage-period.png")} />
   </Zoom>
-  <p>Add a new Period</p>
+  <p>Manage Periods</p>
 </div>
 
 Once the periods are defined for each label, an Admin can:
 
-- **Freeze** ( <img height="15" src={useBaseUrl('img/lock-closed.svg')}/> ): Freezing a period would prevent any report uploads to this period. In the below screenshot, period "2017" is frozen.
-- **Edit** ( <img height="15" src={useBaseUrl('img/edit.svg')}/> ): the period name. The reports uploaded to the edited periods are not affected.
-- **Delete** ( <img height="15" src={useBaseUrl('img/delete.svg')}/> ): a period to remove it permanently. The reports associated with the deleted period will be lost.
-- **Archive** ( <img height="15" src={useBaseUrl('img/archive.svg')}/> ): a period to restrict the download and uploading any reports 
-for this period. "2016" is an archived period in the screenshot below.
+- **Freeze** ( <img height="15" src={useBaseUrl('img/lock-closed.svg')}/> ): Freeze a period(s) to prevent report uploads for the frozen period. All the periods earlier than 'Nov20' are frozen in the above screenshot. 
+- **Edit** ( <img height="15" src={useBaseUrl('img/edit.svg')}/> ): Edit the period's name. The reports uploaded to the edited periods are not affected.
+- **Delete** ( <img height="15" src={useBaseUrl('img/delete.svg')}/> ): Delete a period(s) permanently. The reports associated with the deleted period will be lost.
+- **Archive** ( <img height="15" src={useBaseUrl('img/archive.svg')}/> ): Archive a period(s) to restrict the download and uploading reports for the selected period(s). 
 
 <!--
 <div class="center">
@@ -112,7 +111,7 @@ Select the **Report Type** as "Web" and enter all the field values.
     <p>Create a Web report</p>
   </div>
 
-A new web report named "Raw Materials" is created in the "Empoloyee" category.
+A new web report named "Sales" is created in the "Order & Discounts Reports" category.
 
 ### 2. Create a Mobile Report
 
@@ -154,7 +153,7 @@ Following are the web and mobile reports:
 | Action      | <ul><li>Datasheet ( <img height="15" src={useBaseUrl("img/datasheet.svg")}/> ): Click to download the datasheet for the report.</li><li>Edit ( <img height="15" src={useBaseUrl("img/edit.svg")}/> ) the report properties except the Report/Period Type and Parent Report Name</li><li>Delete ( <img height="15" src={useBaseUrl("img/delete.svg")}/> ): Deletes the report across all the instances (segments/periods).</li></ul> |
 
 :::warning
-If you delete a web report that is linked (parent to) mobile report(s), this will also delete the child mobile report(s).
+If you delete a web report that is linked (parent) to a  mobile report(s), this will also delete the child mobile report(s).
 :::
 
 ## Next Steps

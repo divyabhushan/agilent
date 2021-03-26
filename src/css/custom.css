@@ -64,7 +64,7 @@ img[alt="icon"] {
   text-align: center;
   position: center;
   padding: 0px 70px;
-  width: 80%;
+  width: 95%;
 }
 
 .center p {
@@ -73,7 +73,7 @@ img[alt="icon"] {
 }
 
 #border {
-  border: 2px solid blue;
+  border: 2px solid rgb(28, 28, 31);
   border-radius: 10px;
   padding: 10px;
 }
@@ -103,4 +103,24 @@ caption {
 sup {
   color: gray;
   font-size: 16px;
+}
+
+#lastrow tr:nth-child(17) {
+  border-bottom: 3px ridge lightgray;
+}
+
+#lastrow tr:nth-child(21){
+  border-bottom: 3px ridge lightgray;
+}
+
+#lastrow tr:nth-child(23){
+  border-bottom: 3px ridge lightgray;
+}
+
+#lastrow tr:nth-child(26){
+  border-bottom: 3px ridge lightgray;
+}
+
+#lastrow tr:nth-child(30){
+  border-bottom: 3px ridge lightgray;
 }
