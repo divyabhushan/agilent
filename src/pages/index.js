@@ -19,14 +19,14 @@ const features = [
     title: "ABRT Administration",
     image: "img/admin.svg",
     description:
-      "Report infrastructure administration and users and groups management",
+      "Report infrastructure administration and Users and Groups management",
   },
   {
     link: "/docs/user-mode/welcome",
     title: "ABRT Reports",
     image: "img/reports.svg",
     description:
-      "User guide to access the ABRT web and mobile reports",
+      "User guide to access the ABRT Web and Mobile reports",
   },
 ];
 
