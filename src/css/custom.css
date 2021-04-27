@@ -105,15 +105,11 @@ sup {
   font-size: 16px;
 }
 
-#lastrow tr:nth-child(17) {
+#lastrow tr:nth-child(20) {
   border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(21){
-  border-bottom: 3px ridge lightgray;
-}
-
-#lastrow tr:nth-child(23){
+#lastrow tr:nth-child(24){
   border-bottom: 3px ridge lightgray;
 }
 
@@ -121,6 +117,18 @@ sup {
   border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(30){
+#lastrow tr:nth-child(29){
+  border-bottom: 3px ridge lightgray;
+}
+
+#lastrow tr:nth-child(33){
+  border-bottom: 3px ridge lightgray;
+}
+
+#lastrow tr:nth-child(35){
+  border-bottom: 3px ridge lightgray;
+}
+
+#lastrow tr:nth-child(37){
   border-bottom: 3px ridge lightgray;
 }
