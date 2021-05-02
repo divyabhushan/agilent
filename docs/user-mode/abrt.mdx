@@ -22,14 +22,26 @@ Select the Periods for which the reports are available and download the reports.
 <div class="center">
   <Zoom>
     <img
-      alt="Agilent Log-in screen"
-      src={useBaseUrl("user/abrt-agilent-l3-report.png")}
+      alt="ABRT Web Reports"
+      src={useBaseUrl("user/abrt-web-reports.png")}
     />
   </Zoom>
-  <p>Agilent Log-in Screen</p>
+  <p>ABRT Web Reports</p>
 </div>
 
 In the Periods column, click **Previous** to expand all the periods list.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="ABRT Periods uploads"
+      src={useBaseUrl("user/web-reports-periods.png")}
+    />
+  </Zoom>
+  <p>ABRT Reports Periods uploads</p>
+</div>
+
+Click on any of the periods and the respective report will be downloaded.
 
 In the **Info** column, the user can download the **Datasheet** ( <img src={useBaseUrl('img/datasheet-uploaded.svg')}/> ) and Send Report Notification ( <img height="15" src={useBaseUrl('img/wifi.svg')}/> ).
 
@@ -37,7 +49,7 @@ In the **Info** column, the user can download the **Datasheet** ( <img src={useB
   <Zoom>
     <img
       alt="Send Report Notification"
-      src={useBaseUrl("user/send-report-notification.png")}
+      src={useBaseUrl("user/report-notification.png")}
     />
   </Zoom>
   <p>Send Report Notification</p>
@@ -45,12 +57,12 @@ In the **Info** column, the user can download the **Datasheet** ( <img src={useB
 
 Following are the Send Report Notification form fields:
 
-| Field Name           | Description |
-|----------------------|-------------|
-| Report Name          |             |
-| Notification Subject |             |
-| Notification Message |             |
-| Users                |             |
-| Selected Users       |             |
+| Field Name           | Description                                    |
+|----------------------|------------------------------------------------|
+| Report Name          | Name of the Report                             |
+| Notification Subject | Mail notification subject                      |
+| Notification Message | Mail body message                              |
+| Users                | List of users to send the notification mail to |
+| Selected Users       | Users already selected                         |
 
 Click **Send**.
