@@ -270,7 +270,7 @@ To access the agilent features, you must allow access to the prerequisite permis
         </tr>
         <tr>
             <td>Edit Issue Log</td>
-            <td></td>
+            <td><Link to={useBaseUrl('docs/admin-mode/issue#edit-issue-log')}>Edit Issue Log</Link> Status and Comments.</td>
             <td>View Issue Log</td>
         </tr>
         <tr>
@@ -308,31 +308,21 @@ To access the agilent features, you must allow access to the prerequisite permis
 
 <sup>N/A</sup>: No prerequisite permission required
 
-### 2. Add Users to the customized User Group
+### 2. Add User ( Power Users ) to User Group
 
 * Select the User Group, and click **ADD**.
 * Search the username(s) and click **ADD**.
 
+<div class="center">
+    <Zoom>
+        <img alt="dfdf" src={useBaseUrl('admin/add-users.png')}/>
+    </Zoom>
+    <p>Select and add users to the Group</p>
+</div>
+
 :::important
 All the users(Power users) added to this user group will have both admin-mode and user-mode with the set of permissions enabled for a group.
 :::
-
-<!--
-## User Group permissions
-
-ABRT provides a centralized repository to store and retrieve all types of Agilent reports. These reports are secured with restricted access to users based on their roles and privileges.
-Admins can <Link to={useBaseUrl('docs/admin-mode/user-access')}>manage user access</Link> for each report.
-
-<div class="center">
-  <Zoom>
-    <img
-      alt="Agilent Log-in screen"
-      src={useBaseUrl("admin/user-add-agilent.png")}
-    />
-  </Zoom>
-  <p>Agilent Log-in Screen</p>
-</div>
--->
 
 ## Next Steps
 
