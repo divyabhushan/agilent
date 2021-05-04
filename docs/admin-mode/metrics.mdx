@@ -4,21 +4,462 @@ sidebar_label: Metrics
 title: Metrics
 ---
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+
 Admin/Power user can get the usage metrics of how the portal is used based on different parameters.
+User can select the combinations of metrics to fetch the respective usage report and click **Submit Query**.
 
-User can select the combinations of metrics to fetch the respective usage report.
+## Web Metrics
 
-* Web Metrics
+Shows a log of the the Web reports usage:
 
- 1. Select Metrics
- 1. Select Reports
- 1. From date
- 1. To date
- 1. Select User Type
- 1. Select Segments
+<div class="center">
+  <Zoom>
+    <img
+      alt="Web Metrics"
+      src={useBaseUrl("admin/web-metrics.png")}
+    />
+  </Zoom>
+  <p>Web Metrics</p>
+</div>
 
-**Submit Query**
+Following are the parameters:
 
-* Mobile Metrics
+1. **Select Metrics**: Select a sub category from the access parameters label.
+1. **Select Reports**: A list of all the Web reports.
+1. **From date**: Select a beginning period.
+1. **To date**: Select the latest period. 
+1. **Select User Type**: ABRT or non ABRT user.
+1. **Select Segments**: Select the Segments for usage activity.
 
-* Prod Metrics
+Click [here](./assets/Metrics.xlsx) to download the complete Metrics sheet.
+
+### Select Metrics parameters
+
+Following are the sub categories available in the "Select Metrics" label:
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Select Metrics labels"
+      src={useBaseUrl("admin/select-metrics.png")}
+    />
+  </Zoom>
+  <p>Select Metrics categories</p>
+</div>
+
+The table below groups each sub category under "Select Metrics" and describes each field of the output usage result. 
+
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th> </th>
+            <th>Description</th>
+            <th>Columns</th>
+            <th>Column Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4">Reports Accessed</td>
+            <td rowspan="4">List of Reports accessed by each user in the given date range</td>
+            <td>Report</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>NTID, User Full Name, Organization</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>Segment, Period</td>
+            <td>Report Metadata</td>
+        </tr>
+        <tr>
+            <td>DateTime (PST)</td>
+            <td>Date and Time of Access</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Reports Accessed Usage Graph</td>
+            <td rowspan="3">Gives a monthwise breakdown of the report access frequency by the users for the given period in table view and graph view</td>
+        </tr>
+        <tr>
+            <td>Report Name</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>Month</td>
+            <td>Frequency of the reports in the given month</td>
+        </tr>
+        <tr>
+            <td rowspan="4">User Visited</td>
+            <td rowspan="4">Gives date-wise login of each user and and the login frequency in each date</td>
+            <td>Login Date</td>
+            <td>Date of Login</td>
+        </tr>
+        <tr>
+            <td>NTID, User Full Name</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>No of Logins, Last LoginTIme</td>
+            <td>Login Metadata</td>
+        </tr>
+        <tr>
+            <td>Emp Access Menus</td>
+            <td>Segments the user has access to</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Unique Users Visited</td>
+            <td rowspan="4">Cumulative count of user visit in a given date range</td>
+        </tr>
+        <tr>
+            <td>NTID, User Full Name</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>No of Logins</td>
+            <td>Login Count</td>
+        </tr>
+        <tr>
+            <td>Emp Access Menus</td>
+            <td>Segments the user has access to</td>
+        </tr>
+        <tr>
+            <td rowspan="5">Unique Users Visited - By Organization</td>
+            <td rowspan="5">List of reports accessed and the frequency of access by users of the given organizations in the given
+                daterange</td>
+            <td>Report Name</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>NTID, User Full Name</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>Emp Access Menus</td>
+            <td>Segments the user has access to</td>
+        </tr>
+        <tr>
+            <td>Organization</td>
+            <td>Organization of the User</td>
+        </tr>
+        <tr>
+            <td>Total Views</td>
+            <td>Number of report downloads</td>
+        </tr>
+        <tr>
+            <td rowspan="5">All Users - By Organization</td>
+            <td rowspan="5">Returns the User Access and Restrictions</td>
+            <td>NTID, User Full Name, Organization</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>Access of the Employee</td>
+            <td>Segments the user has access to</td>
+        </tr>
+        <tr>
+            <td>Access of the Report</td>
+            <td>Union of all the reports the user has across segments</td>
+        </tr>
+        <tr>
+            <td>Restricted Reports</td>
+            <td>List of Reports the user does not have access to</td>
+        </tr>
+        <tr>
+            <td>Restricted Departments</td>
+            <td>List of Segments in the user does not have access for the report in the previous column</td>
+        </tr>
+        <tr>
+            <td rowspan="5">Access Refresh Metric</td>
+            <td rowspan="5">Returns the list of Reports that were accessed after a specific refresh period</td>
+        </tr>
+        <tr>
+            <td>Report</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>NTID, User Full Name, Organization</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>Segment, Period</td>
+            <td>Segment and Period of the Report</td>
+        </tr>
+        <tr>
+            <td>DateTime (PST)</td>
+            <td>Date and Time of Access in PST</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Reports Deleted</td>
+            <td rowspan="4">Gives the list of reports whose instances has been deleted along with the user who deleted the same</td>
+            <td>Report</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>Segment, Period</td>
+            <td>Segment and Period of the Report</td>
+        </tr>
+        <tr>
+            <td>NTID, User Full Name, Organization</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>DateTime (PST)</td>
+            <td>Date Time of delete in PST</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Restricted Reports Metrics</td>
+            <td rowspan="4">Returns the list of segments accessable to a user</td>
+            <td>NTID, User Full Name, Organization</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>Access level</td>
+            <td>User Organization</td>
+        </tr>
+        <tr>
+            <td>Report Name</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>Allowed Departments</td>
+            <td>Segments the user has access to</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Not Uploaded Reports</td>
+            <td rowspan="4">List of segments of the given Report and period for which there are no uploads</td>
+            <td>Reports</td>
+            <td>Report Name</td>
+        </tr>
+        <tr>
+            <td>Segment</td>
+            <td>Segment Name</td>
+        </tr>
+        <tr>
+            <td>Periods</td>
+            <td>Period Name</td>
+        </tr>
+    </tbody>
+</table>
+
+Below is a sample log of the reports fetched for 'Reports Accessed' label.
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Reports fetched"
+      src={useBaseUrl("admin/reports-accessed-reports-fetched.png")}
+    />
+  </Zoom>
+  <p>Reports fetched for the 'Reports Accessed' parameters</p>
+</div>
+
+## Mobile Metrics
+
+Mobile Reports usage metrics has the following parameters:
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Reports fetched"
+      src={useBaseUrl("admin/mobile-metrics.png")}
+    />
+  </Zoom>
+  <p>Mobile Metrics</p>
+</div>
+
+Mobile Metrics has an additional parameter in addition to the Web Metrics parameters.
+
+**Select Notification Type**: 
+
+Here is a screenshot with the Mobile Users Metrics:
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Reports fetched"
+      src={useBaseUrl("admin/mobile-metrics-report-logs.png")}
+    />
+  </Zoom>
+  <p>Reports fetched for the 'Reports Accessed' parameters</p>
+</div>
+
+Following table describes the output fields for the Mobile usage Metrics logs:
+
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Title</th>
+            <th>Description</th>
+            <th>Columns</th>
+            <th>Column Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="9">Mobile Reports Metrics</td>
+            <td rowspan="9">List of Reports accessed by each user in the given date range</td>
+            <td>DateTime (PST)</td>
+            <td>Date of Broadcast in PST</td>
+        </tr>
+        <tr>
+            <td>User Full Name, NTID, Organization</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>Report Name</td>
+            <td>Report Name</td>
+        </tr>
+        <tr>
+            <td>Refresh Slot</td>
+            <td>Refresh Slot of the Broadcast</td>
+        </tr>
+        <tr>
+            <td>Period, Department</td>
+            <td>Report Period and Segment</td>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td>Message of the Email</td>
+        </tr>
+        <tr>
+            <td>Report Send</td>
+            <td>Type of the Notification</td>
+        </tr>
+        <tr>
+            <td>Submitter</td>
+            <td>Full Name of the Report Broadcaster</td>
+        </tr>
+        <tr>
+            <td>Time (PST)</td>
+            <td>Time of Broadcast in PST</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Mobile Users Metrics</td>
+            <td rowspan="4">Gives report wise subscription information of the users</td>
+            <td>Report Name</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>NTID, User Full Name, Email ID, Access Level</td>
+            <td>User Metadata</td>
+        </tr>
+        <tr>
+            <td>Departments</td>
+            <td>Segment of Subscription of the user</td>
+        </tr>
+        <tr>
+            <td>Frequency</td>
+            <td>Frequency of subscription for the department</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Mobile Usage Metrics</td>
+            <td rowspan="2">Gives a month wise breakdown of the report access frequency by the users for the given period in table
+                view and graph view</td>
+            <td>Report Name</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>Month</td>
+            <td>Frequency of the reports in the given month</td>
+        </tr>
+    </tbody>
+</table>
+
+## Prod Metrics
+
+A Prod Metrics usage form has 3 parameters to select:
+- **Select Reports**: Report names
+- **Select Month**
+- **Select Workday**: Workday selected for the review
+
+<div class="center">
+  <Zoom>
+    <img
+      alt="Reports fetched"
+      src={useBaseUrl("admin/prod-metrics-logs.png")}
+    />
+  </Zoom>
+  <p>Prod Usage Metrics for all the Reports</p>
+</div>
+
+Following table describes the output fields:
+
+<table class="tableizer-table">
+    <thead>
+        <tr class="tableizer-firstrow">
+            <th>Title</th>
+            <th>Description</th>
+            <th>Columns</th>
+            <th>Column Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="15">Prod Metrics</td>
+            <td rowspan="15">Report Name</td>
+            <td>Report Name</td>
+            <td>Name of the Report</td>
+        </tr>
+        <tr>
+            <td>Segments</td>
+            <td>Segments for the Review</td>
+        </tr>
+        <tr>
+            <td>Report WD</td>
+            <td>Work Date selected for the review</td>
+        </tr>
+        <tr>
+            <td>Prepared By</td>
+            <td>Review Raised by</td>
+        </tr>
+        <tr>
+            <td>Reviewer Name</td>
+            <td>Reviewer assigned by the requester </td>
+        </tr>
+        <tr>
+            <td>Essbase Refresh Time (PST)</td>
+            <td>Base Refresh Time as selected in PST</td>
+        </tr>
+        <tr>
+            <td>Actual Essbase Refresh Time (PST)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Expected Publication Time (PST)</td>
+            <td>Actual Essbase Refresh Time (PST) + 2 Hours</td>
+        </tr>
+        <tr>
+            <td>Expected Publication Date (PST)</td>
+            <td>Date of Expected Publication Time (PST)</td>
+        </tr>
+        <tr>
+            <td>Report Published Time (PST)</td>
+            <td>Time of Review Request in PST</td>
+        </tr>
+        <tr>
+            <td>Report Published Date (PST)</td>
+            <td>Date of Review Request in PST</td>
+        </tr>
+        <tr>
+            <td>Manual Review Done</td>
+            <td>Manual Review Done as entered by the requester</td>
+        </tr>
+        <tr>
+            <td>Remarks from Prepared By</td>
+            <td>Remarks from the requester</td>
+        </tr>
+        <tr>
+            <td>Remarks from Reviewer</td>
+            <td>Remarks from the reviewer</td>
+        </tr>
+        <tr>
+            <td>TAT Miss</td>
+            <td>Says if the Review was raised on or before the expected publication datetime</td>
+        </tr>
+    </tbody>
+</table>
+
