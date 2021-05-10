@@ -11,7 +11,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 
-BIHub provides an integrated (**ABRT**) platform for Agilent users. The **ABRT** platform includes both the product and a custom service with exclusive features.<br></br>
+BIHub provides an integrated (**ABRT**) platform for Agilent users. The **ABRT** platform includes both the products and a custom service with exclusive features.<br></br>
 The Agilent Reports are well-organized in this platform (database).
 Each Report has a unique name, belongs to a sub-division (segment) and a time-period.<br></br>
 To upload, search, download, or delete a report from the ABRT platform, you must specify the correct combination of the report-segment-period mapping as indicated in the below table:
@@ -27,7 +27,7 @@ To upload, search, download, or delete a report from the ABRT platform, you must
          <th>Report4</th>
 	</tr>
     <tr>
-        <td>Segment5</td>
+        <td>Segment1</td>
         <tr>
             <td>Q4</td>
             <td>Q3</td>

@@ -9,8 +9,10 @@ import Link from "@docusaurus/Link";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
-The user can raise a support ticket in the **BI Platform > ABRT Reports** section. 
-Click **Contact Us**.
+To raise a support ticket, select **BI Platform** in the left navigation pane.
+
+* Select **ABRT Reports**. 
+* In the left navigation pane, select **Contact Us**.
 
 <div class="center">
   <Zoom>
