@@ -25,11 +25,12 @@ Mobile reports are summarized report of a web report, and the user must explicit
 
 An Admin must grant access to the user on the respective Web report(parent). Refer <Link to={useBaseUrl('docs/admin-mode/user-access')}>Manage User's access</Link> section.
 
-## Subscribe to the mobile report
+## Subscribe to Mobile report
 
-* Go to **BI Platform > ABRT Reports** and click on **Mobile Reports**.
+* Go to **BI Platform > ABRT Reports** and select **Mobile Reports**.
 * Click the Bell icon ( <img height="15" src={useBaseUrl("img/bell.svg")}/> ) next to the report.
 * Select the segments and click **Next**.
+
 <div class="center">
   <Zoom>
     <img
@@ -39,8 +40,11 @@ An Admin must grant access to the user on the respective Web report(parent). Ref
   </Zoom>
   <p>Select the Segments to subscribe</p>
 </div>
+
 > You can only select the segments that you have access to.
-* Select the Frequency of subscription.
+
+* Select the Frequency under each segment to subscribe and select **Save**.
+
 <div class="center">
   <Zoom>
     <img
@@ -50,10 +54,10 @@ An Admin must grant access to the user on the respective Web report(parent). Ref
   </Zoom>
   <p>Mobile Subscription Frequency</p>
 </div>
-> The mobile subscription frequency is managed by the admin while creating the report.
-* Click **Save**.
 
-You will receive the report summary mail for the subscribed report and mail frequency selected.
+> The mobile subscription frequency is managed by the admin while creating the report.
+
+You will receive the report summary mail for the subscribed report.
 
 ## Send Mobile Notification
 

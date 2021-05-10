@@ -14,17 +14,19 @@ An Admin creates *Groups* with specific permissions and then assigns users to th
 
 Agilent user types based on their roles:
 
-| User            | Description                                                                                                                                                                                                                |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Super Admin** | User ( most privileged) configured while installing BI Hub. Super Admin is added to the "Admin" group and is the default user.                                                                                             |
-| **Admin**       | User added to the "Admin" group by the Super Admin and granted all the privileges like a Super admin. Except that Admins cannot modify "admin" group permissions, nor can add other Admins. Have both admin and user mode. |
-| **Power User**  | Special user added by an Admin. A Power user can perform all the assigned admin tasks, except they cannot modify the group permissions. A Power user has both admin and user mode.                                         |
-| **User**        | This is a regular user with just user-mode.                                                                                                                                                                                |
+| User            | Description                                                                                                                                                                                                        |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Super Admin** | User ( most privileged) configured while installing BI Hub. Super Admin is added to the "Admin" group and is the default user.                                                                                     |
+| **Admin**       | User added to "Admin" group by Super Admin and granted all the privileges like a Super admin. Except that Admins cannot modify "admin" group permissions, nor can add other Admins. Have both admin and user mode. |
+| **Power User**  | Special user added by an Admin. A Power user can perform all the assigned admin tasks, except they cannot modify the group permissions. A Power user has both admin and user mode.                                 |
+| **User**        | This is a regular user with just a `user-mode.                                                                                                                                                                     |
 ## Before you begin
 
 Log-in to BI Hub as a Super Admin with username as `bihubadmin`, and password as `password`.
 
-Go to **Authentication > Add Authentication**. Add "Windows AD" authentication, and assign Groups.
+Go to **Authentication** page and select **Add Authentication**.
+
+Add "Windows AD" authentication, and assign Groups.
  <div class="center">
     <Zoom>
         <img alt="Sync Windows AD users" src={useBaseUrl('admin/winad-auth.png')}
@@ -36,7 +38,7 @@ Go to **Authentication > Add Authentication**. Add "Windows AD" authentication, 
 ## Add Agilent Users
 
 To add multiple agilent users from a group:
-1. In **My Organization > Users** section, click **Assign AD Groups** and enter a single Windows AD Group or a list of Groups to pick the agilent users from, and click **Add**.
+1. In **My Organization > Users** section, select **Assign AD Groups** and enter a single Windows AD Group or a list of Groups to pick the agilent users from. Select **Add**.
  <div class="center">
     <Zoom>
         <img alt="Assign WindowsAd Group" src={useBaseUrl('admin/ad-group.png')}
@@ -68,7 +70,8 @@ Only a `bihubadmin` user can create other admins by adding Agilent users to the 
 No other admin except `bihubadmin` is granted access to the **Admin** group and cannot create more super admins.
 :::
 
-* Go to **User Manager > Manage User Groups**
+* Choose **User Manager** from the left hand navigation pane.
+* Select **Manage User Groups**.
 * Select the **Admin** group, and click **ADD**.
 
 <div class="center">
@@ -96,11 +99,11 @@ A better approach is to create a customized user group with a limited subset of 
 
 ### 1. Create Agilent User Groups
 
-Log-in as an Admin and click **Admin Mode** at the top right corner.
+Log-in as an Admin and select **Admin Mode** at the top right corner.
 
 * Go to **User Manager > Manage User Groups**
-* Click **Add User Group**.
-* Enter a Group's name and click **Create**.
+* Select **Add User Group**.
+* Enter a Group's name and select **Create**.
 * Select the group and click **Manage Permissions** next to the user group. 
 <div class="center">
     <Zoom>
@@ -311,7 +314,7 @@ To access the agilent features, you must allow access to the prerequisite permis
 ### 2. Add User ( Power Users ) to User Group
 
 * Select the User Group, and click **ADD**.
-* Search the username(s) and click **ADD**.
+* In the **Add user to group(s)** pop-up window, search the username(s) and select **ADD**.
 
 <div class="center">
     <Zoom>
@@ -326,4 +329,4 @@ All the users(Power users) added to this user group will have both admin-mode an
 
 ## Next Steps
 
-Log-in to the Agilent platform as a Power user to administer the ABRT platform.
+Log-in to Agilent platform as a Power user to administer the ABRT platform.
