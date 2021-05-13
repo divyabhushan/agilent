@@ -81,3 +81,7 @@ To upload, search, download, or delete a report from the ABRT platform, you must
 - x denotes no reports
 
 You can upload a single report in multiple segments and periods.
+
+## Next Steps
+
+<Link to={useBaseUrl('docs/admin-mode/login')}>Administer the ABRT Platform</Link>.

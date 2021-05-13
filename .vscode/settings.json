@@ -1,20 +1,27 @@
 {
+    "git.ignoreLimitWarning": true,
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/docs/admin-guide/settings/general.md"
+            ],
+            "config": {
+                "audience": "knowledgeable",
+                "dialect": "american",
+                "domain": "technical",
+                "emotions": [
+                    "confident",
+                    "optimistic",
+                    "friendly"
+                ],
+                "goals": [
+                    "inform",
+                    "describe"
+                ],
+                "emotion": "mild"
+            }
+        }
+    ],
     "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "files.associations": {
-        "*.md": "mdx"
-    },
-    "workbench.editorAssociations": [],
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "markdown.extension.toc.orderedList": true,
-    "[mdx]": {
-        "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
-    },
-    "[markdown]": {
-        "editor.wordWrap": "on",
-        "editor.quickSuggestions": true
-    },
-    "[html]": {
-        "editor.suggest.insertMode": "replace"
-    }
+    "editor.formatOnType": true
 }

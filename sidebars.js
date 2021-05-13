@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    "Getting Started": ["intro", "prerequisite"],
+    "Getting Started": ["intro"],
   },
 
   adminMode: {
