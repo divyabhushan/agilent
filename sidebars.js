@@ -1,11 +1,11 @@
 module.exports = {
   someSidebar: {
-    "Getting Started": ["intro", "prerequisite"],
+    "Getting Started": ["intro"],
   },
 
   adminMode: {
     Administration: [
-      "admin-mode/welcome",
+      "admin-mode/login",
       "admin-mode/user-group",
       {
         type: "category",

@@ -15,18 +15,18 @@ module.exports = {
       logo: {
         alt: "My Site Logo",
         src: "img/agilent_logo.png",
-        href: "https://www.agilent.com/",
       },
       hideOnScroll: true,
       items: [
         {
-          to: "/",
+          to: "/docs/",
           label: "Docs",
           title: "Docs Home",
+          activeBaseRegex: "^((?!admin|user).)*$",
           position: "left",
         },
         {
-          to: "docs/admin-mode/welcome",
+          to: "docs/admin-mode/login",
 	        activeBaseRegex: 'admin',          
           label: "Administration",
           position: "right",

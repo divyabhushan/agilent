@@ -15,7 +15,7 @@ const features = [
       "Introduction to ABRT Platform and pre-requisites information",
   },
   {
-    link: "docs/admin-mode/welcome",
+    link: "docs/admin-mode/login",
     title: "ABRT Administration",
     image: "img/admin.svg",
     description:
@@ -58,7 +58,7 @@ function Home() {
         <div className="container">
           <h1 className="hero__title"> {siteConfig.title} </h1>
           <p className="hero__subtitle"> {siteConfig.tagline} </p>
-          <a class="button button--outline button--lg button--active button--primary" href="/docs">Get Started with Docs</a>
+          <a class="button button--outline button--lg button--active button--primary" href="/agilent/docs/">Get Started with Docs</a>
         </div>
       </header>
       <main>
