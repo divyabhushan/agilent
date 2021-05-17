@@ -1,41 +1,62 @@
 module.exports = {
   title: "Agilent Documentation",
-  tagline: "Integrated BIHub Platform for ABRT Reports",
-  url: "https://your-docusaurus-test-site.com",
+  tagline: "Integrated BIHub platform for ABRT Reports",
+  url: "https://github.com/divyabhushan/agilent",
   baseUrl: "/agilent/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "ignore",
   favicon: "img/favicon.ico",
   organizationName: "divyabhushan", // Usually your GitHub org/user name.
   projectName: "agilent", // Usually your repo name.
   themeConfig: {
+    sidebarCollapsible: true,
+    /*
+    algolia: {
+      apiKey: "api-key",
+      indexName: "index-name",
+      algoliaOptions: {}, // Optional, if provided by Algolia
+  },
+  */
     navbar: {
-      title: "Agilent",
-      style: 'primary',
-      logo: {
-        alt: "My Site Logo",
-        src: "img/agilent_logo.png",
-      },
       hideOnScroll: true,
+      logo: {
+        alt: "Agilent",
+        src: "img/agilent_logo.png",
+        
+      },
       items: [
+        /*
+        {
+          to: 'docs/',
+          activeBasePath: 'docs',
+          label: 'Docs',
+          position: 'left',
+
+        },
+        */
+        /*        {to: 'blog', label: 'Blog', position: 'left'}, */
+        /*        {
+          href: 'https://github.com/facebook/docusaurus',
+          label: 'GitHub',
+          position: 'right',
+        },
+*/
         {
           to: "/docs/",
           label: "Docs",
-          title: "Docs Home",
-          activeBaseRegex: "^((?!admin|user).)*$",
           position: "left",
+          activeBaseRegex: "^((?!admin|user).)*$",
         },
         {
           to: "docs/admin-mode/login",
-	        activeBaseRegex: 'admin',          
           label: "Administration",
           position: "right",
+          activeBaseRegex: "admin",
         },
         {
           to: "docs/user-mode/welcome",
-	        activeBaseRegex: "user-mode",          
           label: "Reports",
           position: "right",
+          activeBaseRegex: "user-mode",
         },
       ],
     },
@@ -44,22 +65,24 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
   },
+  plugins: ["docusaurus-lunr-search"],
   presets: [
     [
       "@docusaurus/preset-classic",
       {
         docs: {
+          // It is recommended to set document id as docs home page (`docs/` path).
+          
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/",
         },
+        /*
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
+        */
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },

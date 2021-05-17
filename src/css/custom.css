@@ -1,151 +1,194 @@
 /* stylelint-disable docusaurus/copyright-header */
+
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
 
+
 /* You can override the default Infima variables here. */
+
 :root {
-  --ifm-color-primary: #2565ab;
-  --ifm-color-primary-dark: #215b9a;
-  --ifm-color-primary-darker: #1f5691;
-  --ifm-color-primary-darkest: #1a4778;
-  --ifm-color-primary-light: #296fbc;
-  --ifm-color-primary-lighter: #2b74c5;
-  --ifm-color-primary-lightest: #3a84d4;
-  --ifm-code-font-size: 95%;
+	--ifm-color-primary: #2565ab;
+	--ifm-color-primary-dark: #215b9a;
+	--ifm-color-primary-darker: #1f5691;
+	--ifm-color-primary-darkest: #1a4778;
+	--ifm-color-primary-light: #296fbc;
+	--ifm-color-primary-lighter: #2b74c5;
+	--ifm-color-primary-lightest: #3a84d4;
+	--ifm-code-font-size: 90%;
+	font-size: 14px;
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+	background-color: rgb(72, 77, 91);
+	display: block;
+	margin: 0 calc(-1 * var(--ifm-pre-padding));
+	padding: 0 var(--ifm-pre-padding);
 }
 
 html[data-theme="dark"] h1.hero__title,
 html[data-theme="dark"] p.hero__subtitle {
-  color: #ffffff !important;
+	color: #FFFFFF !important;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .box {
-  float: left;
-  width: 33.33%;
-  padding: 40px 40px 20px 20px;
-  border: 2px solid #fefefe;
-  border-radius: 10px;
-  color: rgb(33, 175, 144);
-  transition: box-shadow 0.3s;
+	float: left;
+	width: 33.33%;
+	padding: 40px 40px 20px 20px;
+	border: 2px solid #fefefe;
+	border-radius: 10px;
+	color: rgb(33, 175, 144);
+	transition: box-shadow .3s;
 }
 
 .box:hover {
-  box-shadow: 0 0 15px rgba(33, 33, 33, 0.2);
+	box-shadow: 0 0 15px rgba(33, 33, 33, .2);
+}
+
+#toc {
+	background-color: whitesmoke;
 }
 
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 img[alt="icon"] {
-  width: 14px;
+	width: 14px;
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  position: center;
-  padding: 0px 70px;
-  width: 95%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: center;
+	padding: 0px 70px;
+	width: 100%;
 }
 
 .center p {
-  text-align: center;
-  color: slategray;
+	text-align: center;
+	color: slategray;
+}
+
+#date {
+	width: 105px;
+}
+
+#myTable tr,
+td {
+	padding: 4em;
+	text-align: left;
+	vertical-align: top;
+	border: 1px solid #BBB;
+	border-radius: 0 !important;
+	line-height: 1.6em;
+}
+
+#myTable li {
+	text-align: webkit-match-parent;
+}
+
+#myTable th {
+	background-color: #215b9a;
+	color: white;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: center;
+	padding: 0px 70px;
+	width: 95%;
+}
+
+.center p {
+	text-align: center;
+	color: slategray;
 }
 
 #border {
-  border: 2px solid rgb(28, 28, 31);
-  border-radius: 10px;
-  padding: 10px;
+	margin: 10px 30px;
+	padding: 0px;
+	textAlign: center;
+	border: 1px solid gray;
 }
 
 .cell {
-  text-align: center;
-  border-style: none;
+	text-align: center;
+	border-style: none;
 }
 
-caption { 
-  display: table-caption;
-  text-align: center;
-  caption-side: bottom;
-}
-
-.rect {
-  border-radius: 0px;
-  font: 400 13.3333px Arial;
-  color: rgb (25,120,210);
+caption {
+	display: table-caption;
+	text-align: center;
+	caption-side: bottom;
 }
 
 #error {
-  font-style: inherit;
-  color: red;
+	font-style: inherit;
+	color: red;
 }
 
 sup {
-  color: gray;
-  font-size: 16px;
+	color: gray;
+	font-size: 16px;
 }
 
 #lastrow tr:nth-child(20) {
-  border-bottom: 3px ridge lightgray;
+	border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(24){
-  border-bottom: 3px ridge lightgray;
+#lastrow tr:nth-child(24) {
+	border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(26){
-  border-bottom: 3px ridge lightgray;
+#lastrow tr:nth-child(26) {
+	border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(29){
-  border-bottom: 3px ridge lightgray;
+#lastrow tr:nth-child(29) {
+	border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(33){
-  border-bottom: 3px ridge lightgray;
+#lastrow tr:nth-child(33) {
+	border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(35){
-  border-bottom: 3px ridge lightgray;
+#lastrow tr:nth-child(35) {
+	border-bottom: 3px ridge lightgray;
 }
 
-#lastrow tr:nth-child(37){
-  border-bottom: 3px ridge lightgray;
+#lastrow tr:nth-child(37) {
+	border-bottom: 3px ridge lightgray;
 }
 
 .tableizer-table {
-  font-size: 12px;
-  border: 1px solid #CCC;
-  font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px solid #CCC;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
 .tableizer-table td {
-    padding: 4px;
-		margin: 3px;
-		border: 1px solid #CCC;
+	padding: 4px;
+	margin: 3px;
+	border: 1px solid #CCC;
 }
 
 .tableizer-table th {
-  background-color: #104E8B; 
-  color: #FFF;
-  font-weight: bold;
+	background-color: #104E8B;
+	color: #FFF;
+	font-weight: bold;
 }
