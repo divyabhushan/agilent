@@ -47,14 +47,14 @@ module.exports = {
           activeBaseRegex: "^((?!admin|user).)*$",
         },
         {
-          to: "docs/admin-mode/login",
+          to: "/docs/",
           label: "Administration",
           position: "right",
           activeBaseRegex: "admin",
         },
         {
           to: "docs/user-mode/welcome",
-          label: "Reports",
+          label: "User Guide",
           position: "right",
           activeBaseRegex: "user-mode",
         },
@@ -62,7 +62,7 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc.`,
     },
   },
   plugins: ["docusaurus-lunr-search"],

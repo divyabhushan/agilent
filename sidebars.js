@@ -1,10 +1,7 @@
 module.exports = {
-  someSidebar: {
-    "Getting Started": ["intro"],
-  },
-
   adminMode: {
     Administration: [
+      "admin-mode/intro",
       "admin-mode/welcome",
       "admin-mode/user-group",
       {

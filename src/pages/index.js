@@ -9,21 +9,15 @@ import styles from "./styles.module.css";
 const features = [
     {
         link: "/docs/",
-        title: "ABRT Platform",
-        image: "img/database.svg",
-        description: "Introduction to ABRT Platform and pre-requisites information",
-    },
-    {
-        link: "/docs/admin-mode/welcome",
         title: "ABRT Administration",
         image: "img/admin.svg",
         description: "Report infrastructure administration and Users and Groups management",
     },
     {
         link: "/docs/user-mode/welcome",
-        title: "ABRT Reports",
+        title: "User Guide",
         image: "img/reports.svg",
-        description: "User guide to access the ABRT Web and Mobile reports and raise support ticket.",
+        description: "Access ABRT Web and Mobile reports and raise support ticket.",
     },
 ];
 
@@ -32,7 +26,7 @@ function Feature({ image, title, description, link }) {
     const linkUrl = useBaseUrl(link);
 
     return ( <
-        Link className = { classnames("col col--4") }
+        Link className = { classnames("col") }
         to = { linkUrl } >
         <
         div className = { styles.features } >

@@ -84,4 +84,4 @@ You can upload a single report in multiple segments and periods.
 
 ## Next Steps
 
-<Link to={useBaseUrl('docs/admin-mode/login')}>Administer the ABRT Platform</Link>.
+<Link to={useBaseUrl('docs/admin-mode/welcome')}>Administer the ABRT Platform</Link>.
